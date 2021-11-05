@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">candidate_name</th>
+        <th scope="col">job_role</th>
+        <th scope="col">working_in_us_shift</th>
+        <th scope="col">notice_period(days)</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for obj in candidate_qs %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{obj.candidate_name}}</td>
+        <td>{{obj.job_role}}</td>
+        <td>{{obj.working_in_us_shift}}</td>
+        <td>{{obj.notice_period}}</td>
+        <td><a href="{% url 'candidates:update' id=obj.id %}" type="button" class="btn btn-primary">Update</a> | <a href="{% url 'candidates:delete' id=obj.id %}" type="button" class="btn btn-danger">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+
+</script>
+
+{% endblock scripts %}

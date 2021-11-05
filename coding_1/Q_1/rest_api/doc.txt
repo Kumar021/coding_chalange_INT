@@ -1,0 +1,6 @@
+REST API ENDPOINT
+
+#1 http://localhost:8001/api/candidates/ - GET and POST
+#2 http://localhost:8001/api/candidate/<pk>/ - GET , PUT and DELETE
+
+#Swagger http://localhost:8001/swagger/
