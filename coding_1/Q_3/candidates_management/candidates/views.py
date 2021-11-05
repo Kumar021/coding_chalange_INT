@@ -9,7 +9,6 @@ from django.views.generic import ListView, DetailView, DeleteView
 
 def candidates_create_view(request):
 	if request.method == "POST":
-		print("request.POST :", request.POST)
 		form = CandidatesForm(request.POST)
 		if form.is_valid():
 			candidate_name = form.cleaned_data['candidate_name']
@@ -79,7 +78,6 @@ class CandidateUpdateView(View):
 	Candidate Update
 	"""
 	def get(self, request, id, *args, **kwargs):
-		print("id :", id)
 		initial = {}
 		for i in range(len(candidate_list)):
 			if str(candidate_list[i].get('id')) == id:
