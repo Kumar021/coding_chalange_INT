@@ -1,0 +1,15 @@
+
+
+Assignment-
+
+ 
+
+Q1. Create models.py, urls.py, admin.py, serializer.py, models.py and views.py files with class based GET and POST views apis to create and get details (candidate_name, job_role, working_in_us_shift, notice_period(days)) on the basis of id from a table candidate.
+
+ 
+
+Q2. In pervious question create these files again with an html template and display the same data using template rendering.
+
+ 
+
+Q3. In the same question define some static data in the form of list and dictionaries and create a simple class with same GET, POST methods which creates an object and fetches data on the basis of id passed as an argument to the class.
